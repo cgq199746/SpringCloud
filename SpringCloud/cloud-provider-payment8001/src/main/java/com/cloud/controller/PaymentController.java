@@ -7,8 +7,13 @@ import com.cloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping
@@ -20,6 +25,10 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
+
+    //通过服务发现来获得该服务的信息
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @PostMapping("/create")
     public CommonResult create(@RequestBody Payment payment){
@@ -42,6 +51,23 @@ public class PaymentController {
         }else {
             return new CommonResult(404,"success:"+serverPort,null);
         }
+    }
+
+    @GetMapping("/discovery")
+    public Object discover(){
+        List<String> services = discoveryClient.getServices();
+        for (String service : services) {
+            System.out.println(service);
+            log.info("service:"+service);
+        }
+
+        List<ServiceInstance> instances = discoveryClient.getInstances("CGQ-CLOUD-PAYMENT-SERVCIE");
+        for (ServiceInstance instance : instances) {
+            log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
+        }
+
+        return this.discoveryClient;
+
     }
 
 }

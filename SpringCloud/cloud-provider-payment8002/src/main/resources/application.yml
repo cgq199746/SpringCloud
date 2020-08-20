@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/tests?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
     username: root
-    password: 123456789
+    password: root
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -26,3 +26,8 @@ eureka:
     #主机名的修改
     instance-id: payment8002
     prefer-ip-address: true  #访问路径可以显示IP地址
+    #Eureka客户端向服务端发送心跳的时间间隔 ，单位为秒（默认是30秒）
+    lease-renewal-interval-in-seconds: 1
+    #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒 （默认是90秒），超时将剔除微服务
+    lease-expiration-duration-in-seconds: 2
+

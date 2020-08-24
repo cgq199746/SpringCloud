@@ -70,4 +70,11 @@ public class PaymentController {
 
     }
 
+    @GetMapping("/getServerPort")
+    public String getServerPort(){
+        return serverPort;
+    }
+
+
+
 }

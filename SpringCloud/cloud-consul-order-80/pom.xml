@@ -12,55 +12,42 @@
     <artifactId>cloud-consul-order-80</artifactId>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-consul-discovery -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
-
-        <dependency>
+        <dependency><!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
             <groupId>com.cloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+        <!--监控-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+        <!--SpringCloud consul-server-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>
+        <!--热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
 
 

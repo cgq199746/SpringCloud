@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 
 @Controller
 public class OrderzkController {
-    public static final String PAYMENT_URL = "http://CGQ-CLOUD-PAYMENT-SERVCIE";
+    public static final String PAYMENT_URL = "http://CGQ-CLOUD-PAYMENT-SERVICE";
 
     @Resource
     private RestTemplate restTemplate;

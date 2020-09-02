@@ -24,7 +24,7 @@ public class OrderController {
     //public static final String PAYMENT_URL = "http://localhost:8001";
 
     //集群版
-    public static final String PAYMENT_URL = "http://CGQ-CLOUD-PAYMENT-SERVCIE";
+    public static final String PAYMENT_URL = "http://CGQ-CLOUD-PAYMENT-SERVICE";
 
     @Resource
     private RestTemplate restTemplate;

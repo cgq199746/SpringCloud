@@ -2,6 +2,7 @@ package com.cloud.controller;
 
 import com.cloud.entities.CommonResult;
 import com.cloud.servcie.PaymentFeignService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,13 +17,13 @@ import javax.annotation.Resource;
  * @create: 2020-09-07
  **/
 @RestController
-@RequestMapping()
+@Slf4j
 public class OrderFeignController {
 
     @Resource
     private PaymentFeignService paymentFeignService;
 
-    @GetMapping("/getPaymentById/{id}")
+    @GetMapping("/consumer/getPaymentById/{id}")
     public CommonResult get(@PathVariable("id")int id){
         return paymentFeignService.getId(id);
     }

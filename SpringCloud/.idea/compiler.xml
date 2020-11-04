@@ -22,6 +22,8 @@
         <module name="cloud-consumer-order80" />
         <module name="cloud_consule_pay_8006" />
         <module name="cloud-provider-hystrix-payment8001" />
+        <module name="cloud-config-3344" />
+        <module name="cloud-config-client-3366" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

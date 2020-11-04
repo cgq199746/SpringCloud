@@ -18,6 +18,7 @@
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-consumerzk-order80" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="cloud-stream-rabbitmq-consumer8803" />
         <module name="cloud-consul-order-80" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud_order_feign-80" />

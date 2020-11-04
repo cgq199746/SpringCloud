@@ -1,5 +1,5 @@
 server:
-  port: 8802
+  port: 8803
 
 spring:
   application:
@@ -21,7 +21,7 @@ spring:
           destination: studyExchange #表示要使用的Exchange名称定义
           content-type: application/json #设置消息类型 本次为json ，文本则设置"text/plain"
           binder: defaultRabbit
-          group: groupA
+          group: groupB
 
 eureka:
   client:
@@ -30,5 +30,5 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 2  #设置心跳的时间间隔
     lease-expiration-duration-in-seconds: 5  #如果现在超过了5秒间隔
-    instance-id: receive-8002.com   #在信息列表时显示主机名称
+    instance-id: receive-8003.com   #在信息列表时显示主机名称
     prefer-ip-address: true      #访问的路径变为ip地址

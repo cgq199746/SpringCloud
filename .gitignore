@@ -1,0 +1,108 @@
+##git ignore file
+
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+### Java ###
+*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+# Package Files #
+*.jar
+*.war
+*.ear
+# maven ignore
+*.zip
+*.tar
+*.tar.gz
+*.class
+*.project
+*.factorypath
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+### IntelliJ IDEA ###
+.idea
+*.iml
+*.ipr
+*.iws
+### Python ###
+*.pyc
+### Vim ###
+*.swp
+
+### eclipse ignore
+.settings/
+.classpath
+target/
+bin/
+NewCustServSer/
+SrenewSer/
+sms-drugstore/
+
+### idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+### temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+
+### Build Tools
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+
+### STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+
+### NetBeans ###
+nbproject/private/
+build/*
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+!*/build/*.java
+!*/build/*.html
+!*/build/*.xml
+
+
+## backend
+**/target
+**/logs
+
+## front
+**/*.lock

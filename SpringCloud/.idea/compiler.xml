@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-stream-rabbitmq-comsumer8802" />
+        <module name="cloudalibaba-config-nacos-client3377" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8004" />
         <module name="cloud-eureka-server7001" />

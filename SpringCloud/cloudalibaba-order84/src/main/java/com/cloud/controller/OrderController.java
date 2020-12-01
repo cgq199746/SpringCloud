@@ -28,7 +28,8 @@ public class OrderController {
 
 
     @GetMapping("/comsumer/fallback/{id}")
-    @SentinelResource(value = "fallback",fallback = "handlerFallback")
+    @SentinelResource(value = "fallback",fallback = "handlerFallback",blockHandler = "blockHandler",
+    exceptionsToIgnore = {NullPointerException.class})
     public CommonResult fallback(@PathVariable("id") Integer id){
 
         CommonResult result = restTemplate.getForObject(SERVICE_URL + "/payment", CommonResult.class, id);
@@ -44,6 +45,12 @@ public class OrderController {
     public CommonResult handlerFallback(@PathVariable("id") Integer id,Throwable throwable){
         Payment payment = new Payment(id,"null");
         return new CommonResult(444,"兜底异常handlerFallback：" + throwable.getMessage(),payment);
+
+    }
+
+    public CommonResult blockHandler(@PathVariable("id") Integer id,Throwable throwable){
+        Payment payment = new Payment(id,"null");
+        return new CommonResult(444,"blockHandler限流：" + throwable.getMessage(),payment);
 
     }
 

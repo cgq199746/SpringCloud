@@ -13,6 +13,14 @@ spring:
         dashboard: 182.254.240.76:8080
         #机器Http Server 默认8719地址，如果被占用，会自动从8719开始+1，到找到未被占用的端口
         port: 8719
+        datasource:
+          ds1:
+            nacos:
+              server-addr: 182.254.240.76:8848
+              dataId: cloudalibaba-sentinel-service
+              groupId: DEFAULT_GROUP
+              data-type: json
+              rule-type: flow
 
 management:
   endpoints:

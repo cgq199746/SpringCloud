@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloudalibaba-sentinel-service8401</artifactId>
+    <artifactId>cloudalibaba-payment-9003</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
@@ -17,11 +17,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!-- SpringCloud ailibaba sentinel-datasource-nacos 持久化需要用到-->
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
         <!-- SpringCloud ailibaba sentinel-->
         <dependency>
@@ -72,7 +67,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.cloud.SentinelMain8401</mainClass>
+                    <mainClass>com.cloud.PaymentMain9003</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>
@@ -85,5 +80,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

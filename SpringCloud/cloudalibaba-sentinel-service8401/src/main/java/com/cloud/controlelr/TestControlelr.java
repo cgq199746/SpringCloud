@@ -19,14 +19,20 @@ public class TestControlelr {
     }
 
     @GetMapping("/testb")
-    public String testB(){
+    public String testB() throws InterruptedException {
+        Thread.sleep(3000);
         return "testb";
+    }
+
+    @GetMapping("/testd")
+    public String testD() {
+        int i = 1/0;
+        return "testd";
     }
 
     @GetMapping("/testhotkey")
     @SentinelResource(value = "testhotkey", blockHandler = "deal_testHotkey")
     public String testHotKey(@RequestParam(value = "p1",required = false)String p1,@RequestParam(value = "p2",required = false)String p2){
-
         return "testHotKey";
     }
 

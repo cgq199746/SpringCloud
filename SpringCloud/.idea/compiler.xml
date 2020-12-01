@@ -22,6 +22,8 @@
         <module name="cloud-provider-payment8004" />
         <module name="cloud-api-commons" />
         <module name="cloud-provider-payment8001" />
+        <module name="cloudalibaba-payment-9003" />
+        <module name="cloudalibaba-payment-9004" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
         <module name="cloudalibaba-provider-payment9002" />
         <module name="cloudalibaba-provider-payment9001" />
@@ -36,6 +38,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="cloud-stream-rabbitmq-provider8802" target="1.8" />
+      <module name="com.cloud.PaymentMain9003" target="1.8" />
+      <module name="com.cloud.PaymentMain9004" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
